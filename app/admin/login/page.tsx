@@ -24,12 +24,12 @@ export default function AdminLoginPage() {
 
     return (
         <div style={{ maxWidth: 400, margin: '80px auto' }}>
-            <h1>Admin Login</h1>
+            <h1 style={{ fontWeight: 'bold', fontSize: '2rem' }}>Admin Login</h1>
             <Form layout="vertical" onFinish={onFinish}>
-                <Form.Item name="username" label="Username" rules={[{ required: true }]}>
+                <Form.Item name="username" label={<span style={{ color: 'white' }}>Username</span>} rules={[{ required: true }]}>
                     <Input />
                 </Form.Item>
-                <Form.Item name="password" label="Password" rules={[{ required: true }]}>
+                <Form.Item name="password" label={<span style={{ color: 'white' }}>Password</span>} rules={[{ required: true }]}>
                     <Input.Password />
                 </Form.Item>
                 <Form.Item>

@@ -56,7 +56,7 @@ export default function NewPostPage() {
 
     return (
         <div style={{ maxWidth: 800, margin: '40px auto' }}>
-            <h1>New Post</h1>
+            <h1 style={{ fontWeight: 'bold', fontSize: '2rem', textDecoration: 'underline' }}>New Post</h1>
 
             {createdSlug && (
                 <p>
@@ -66,16 +66,16 @@ export default function NewPostPage() {
 
             <Form form={form} layout="vertical" onFinish={onFinish}
                 initialValues={{ author: 'Kevin Rosengren' }}>
-                <Form.Item name="title" label="Title" rules={[{ required: true }]}>
+                <Form.Item name="title" label={<span style={{ color: 'white' }}>Title</span>} rules={[{ required: true }]}>
                     <Input />
                 </Form.Item>
-                <Form.Item name="content" label="Content" rules={[{ required: true }]}>
+                <Form.Item name="content" label={<span style={{ color: 'white' }}>Content</span>} rules={[{ required: true }]}>
                     <Input.TextArea rows={16} />
                 </Form.Item>
-                <Form.Item name="tags" label="Tags (comma-separated)">
+                <Form.Item name="tags" label={<span style={{ color: 'white' }}>Tags (comma-separated)</span>}>
                     <Input placeholder="Go, DevOps, RosenPi" />
                 </Form.Item>
-                <Form.Item name="author" label="Author" rules={[{ required: true }]}>
+                <Form.Item name="author" label={<span style={{ color: 'white' }}>Author</span>} rules={[{ required: true }]}>
                     <Input />
                 </Form.Item>
                 <Form.Item>
