@@ -24,13 +24,13 @@ export default function BlogCard({ post }: BlogCardProps) {
             </Link>
 
             <div className="flex flex-wrap items-center justify-between gap-y-2 mt-4">
-                <span className="text-sm text-[#8b8b9a]">
+                <span className="text-[#8b8b9a]" style={{ fontSize: '1.5rem' }}>
                     {formatDate(post.published_at)}
                 </span>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 text-xl">
                     {post.tags?.map(tag => (
-                        <Tag key={tag} color="gold">{tag}</Tag>
+                        <Tag key={tag} color="#8b1a1a" style={{ fontSize: '1.15rem' }}>{tag}</Tag>
                     ))}
                 </div>
             </div>
