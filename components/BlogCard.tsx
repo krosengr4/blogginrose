@@ -29,7 +29,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 </span>
 
                 <div className="flex gap-2">
-                    {post.tags.map(tag => (
+                    {post.tags?.map(tag => (
                         <Tag key={tag} color="blue">{tag}</Tag>
                     ))}
                 </div>
