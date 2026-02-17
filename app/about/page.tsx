@@ -29,7 +29,7 @@ export default function AboutPage() {
                         href="https://github.com/krosengr4"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
+                        className="text-[#fbb040] hover:underline"
                     >
                         GitHub
                     </a>
@@ -37,7 +37,7 @@ export default function AboutPage() {
                         href="https://linkedin.com/in/yourprofile"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline"
+                        className="text-[#fbb040] hover:underline"
                     >
                         LinkedIn
                     </a>

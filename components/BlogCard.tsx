@@ -16,21 +16,21 @@ export default function BlogCard({ post }: BlogCardProps) {
     };
 
     return (
-        <article className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+        <article className="border border-[#333] rounded-lg p-6 hover:border-[#fbb040] hover:shadow-[0_0_12px_rgba(251,176,64,0.15)] transition-all bg-[#242424]">
             <Link href={`/posts/${post.slug}`}>
-                <h2 className="text-2xl font-semibold mb-2 hover:text-blue-600">
+                <h2 className="text-2xl font-semibold mb-2 text-[#fbb040] hover:text-[#e09d30] transition-colors">
                     {post.title}
                 </h2>
             </Link>
 
             <div className="flex flex-wrap items-center justify-between gap-y-2 mt-4">
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-[#8b8b9a]">
                     {formatDate(post.published_at)}
                 </span>
 
                 <div className="flex flex-wrap gap-2">
                     {post.tags?.map(tag => (
-                        <Tag key={tag} color="blue">{tag}</Tag>
+                        <Tag key={tag} color="gold">{tag}</Tag>
                     ))}
                 </div>
             </div>
