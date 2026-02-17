@@ -2,7 +2,7 @@ import axios from "axios";
 import { BlogPost, LoginRequest, LoginResponse } from "./types";
 
 // Create axios instance
-const apiClient = axios.create({
+export const apiClient = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_URL || "/api",
     headers: {
         "Content-Type": "application/json",
