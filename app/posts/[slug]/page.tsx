@@ -3,11 +3,12 @@ import MarkdownRenderer from '@/components/MarkdownRenderer';
 import { Tag } from 'antd';
 import { notFound } from 'next/navigation';
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     let post;
 
     try {
-        post = await fetchPostBySlug(params.slug);
+        post = await fetchPostBySlug(slug);
     } catch (error) {
         notFound();
     }
