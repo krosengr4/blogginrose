@@ -30,15 +30,16 @@ export default function HomePage() {
 
   const handleSearch = async (value: string) => {
     setSearchQuery(value);
-    if (value.trim() === '') {
-      loadPosts();
-    } else {
-      try {
+    try {
+      if (value.trim() === '') {
+        const data = await fetchPosts();
+        setPosts(data);
+      } else {
         const results = await searchPosts(value);
-        setPosts(results);
-      } catch (err) {
-        console.error('Search failed:', err)
+        setPosts(results ?? []);
       }
+    } catch (err) {
+      console.error('Search failed:', err);
     }
   };
 
@@ -58,13 +59,17 @@ export default function HomePage() {
         />
       </div>
 
-      <Row gutter={[24, 24]}>
-        {posts.map((post) => (
-          <Col xs={24} md={12} lg={8} key={post.post_id}>
-            <BlogCard post={post} />
-          </Col>
-        ))}
-      </Row>
+      {posts.length === 0 && searchQuery.trim() !== '' ? (
+        <p className="text-gray-500 text-center py-12">No posts match your search...</p>
+      ) : (
+        <Row gutter={[24, 24]}>
+          {posts.map((post) => (
+            <Col xs={24} md={12} lg={8} key={post.post_id}>
+              <BlogCard post={post} />
+            </Col>
+          ))}
+        </Row>
+      )}
     </div>
   );
 }
