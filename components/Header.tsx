@@ -8,7 +8,7 @@ export default function Header() {
                     Kevin Rosengren
                 </Link>
                 <ul className="flex gap-6">
-                    <li><link href="/" className="hover:text-blue-600">Blog</link></li>
+                    <li><Link href="/" className="hover:text-blue-600">Blog</Link></li>
                     <li><Link href="/about" className="hover:text-blue-600">About</Link></li>
                 </ul>
             </nav>
