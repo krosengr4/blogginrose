@@ -4,7 +4,7 @@ export interface BlogPost {
     content: string,
     slug: string,
     tags: string[],
-    author: string[],
+    author: string,
     published_at: string,
 }
 

@@ -16,7 +16,7 @@ export async function fetchPosts(): Promise<BlogPost[]> {
     return response.data;
 }
 
-export async function fetchPostsBySlug(slug: string): Promise<BlogPost> {
+export async function fetchPostBySlug(slug: string): Promise<BlogPost> {
     const response = await apiClient.get<BlogPost>(`/posts/${slug}`);
     return response.data;
 }
