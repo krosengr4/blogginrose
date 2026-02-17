@@ -17,7 +17,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <article className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 
-            <div className="flex items-center gap-4 mb-8 text-gray-600">
+            <div className="flex items-center gap-4 mb-8 text-[#8b8b9a]">
                 <span>
                     {new Date(post.published_at).toLocaleDateString('en-US', {
                         year: 'numeric',
@@ -27,7 +27,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                 </span>
                 <div className="flex gap-2">
                     {post.tags.map((tag) => (
-                        <Tag key={tag} color="blue">{tag}</Tag>
+                        <Tag key={tag} color="gold">{tag}</Tag>
                     ))}
                 </div>
             </div>
