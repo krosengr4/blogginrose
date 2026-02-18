@@ -20,7 +20,7 @@ export default function HomePage() {
     setLoading(true);
     try {
       const data = await fetchPosts();
-      setPosts(data);
+      setPosts(data ?? []);
     } catch (err) {
       console.error("Failed to load posts:", err);
     } finally {
