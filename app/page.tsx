@@ -61,6 +61,10 @@ export default function HomePage() {
 
       {posts.length === 0 && searchQuery.trim() !== '' ? (
         <p className="text-gray-500 text-center py-12">No posts match your search...</p>
+      ) : posts.length === 0 ? (
+        <div className="flex items-center justify-center" style={{ minHeight: '60vh' }}>
+          <p className="text-gray-500 text-center text-lg">No posts to display yet. Check back soon...</p>
+        </div>
       ) : (
         <Row gutter={[24, 24]}>
           {posts.map((post) => (
