@@ -33,7 +33,7 @@ export default function HomePage() {
     try {
       if (value.trim() === '') {
         const data = await fetchPosts();
-        setPosts(data);
+        setPosts(data ?? []);
       } else {
         const results = await searchPosts(value);
         setPosts(results ?? []);
