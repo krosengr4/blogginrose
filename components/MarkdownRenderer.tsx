@@ -10,7 +10,7 @@ interface MarkdownRendererProps {
 
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     return (
-        <div className="prose max-w-none">
+        <div className="prose prose-invert max-w-none break-words">
             <ReactMarkdown
                 components={{
                     code({ node, className, children, ...props }: any) {
